@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben - Pop Artist</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f8f8f8;
+        font-family: "Montserrat", sans-serif;
+        color: #333;
+      }
+      header {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        animation: headerFadeIn 0.8s ease-out forwards;
+      }
+      header h1 {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        animation: fadeInUp 1s ease-out 0.4s forwards;
+      }
+      header p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        font-weight: 400;
+        animation: fadeInUp 1s ease-out 0.6s forwards;
+      }
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 50px 30px;
+      }
+      .about,
+      .album,
+      .concert {
+        margin-bottom: 50px;
+        animation: fadeInUp 1s ease-out forwards;
+      }
+      .about h2,
+      .album h2,
+      .concert h2 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .about p,
+      .concert p {
+        font-size: 20px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+      .album {
+        text-align: center;
+      }
+      .album p:first-child {
+        font-size: 20px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+      .album a {
+        background-color: #e63946;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1.5;
+        padding: 15px 40px;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        font-weight: 600;
+        position: relative;
+        overflow: hidden;
+      }
+      .album a:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        z-index: 10;
+        opacity: 0;
+        transition: transform 0.6s ease-out 0s, opacity 0.6s ease-out 0s;
+      }
+      .album a:hover:before {
+        transform: translate(-50%, -50%) scale(50);
+        opacity: 0.8;
+        transition: transform 0.6s ease-out 0.3s, opacity 0.6s ease-out 0.3s;
+      }
+      .album a:hover {
+        background-color: #a53845;
+        transition: all 0.6s ease-out;
+      }
+      footer {
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        font-size: 16px;
+      }
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+      @media only screen and (min-width: 768px) {
+        header h1 {
+          font-size: 60px;
+        }
+        header p {
+          font-size: 22px;
+        }
+        main {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .about,
+        .album,
+        .concert {
+          margin-bottom: 0;
+          width: 50%;
+        }
+        .about {
+          order: 1;
+          animation-delay: 0.4s;
+        }
+        .album {
+          order: 2;
+          text-align: center;
+          animation-delay: 0.6s;
+        }
+        .album p:first-child {
+          font-size: 24px;
+        }
+        .concert {
+          order: 3;
+          animation-delay: 0.8s;
+        }
+        .concert p:first-child {
+          font-size: 24px;
+        }
+        footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        footer p {
+          font-size: 18px;
+        }
+        footer a {
+          font-size: 18px;
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes headerFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ben</h1>
+      <p>The Official Website of the Pop Artist</p>
+    </header>
+    <main>
+      <section class="about">
+        <h2>About</h2>
+        <p>
+          Ben is a talented pop artist with a unique style and sound. He has
+          been making waves in the music industry with his catchy melodies and
+          heartfelt lyrics.
+        </p>
+        <p>
+          From a young age, Ben was drawn to music and began writing his own
+          songs. He has since developed a loyal fan base and continues to create
+          music that resonates with his listeners.
+        </p>
+      </section>
+      <section class="album">
+        <h2>New Album - "Wrong"</h2>
+        <p>
+          Ben's highly anticipated new album "Wrong" has recently been released. This album is a reflection of Ben's personal experiences and
+          showcases his growth as an artist.
+        </p>
+        <a href="#">Preorder Now!</a>
+      
+      </section>
+      <section class="concert">
+        <h2>Wrong Concert - 12 Years in the Making</h2>
+        <p>
+          Don't miss Ben's epic "wrong" concert, a culmination of 12 years of
+          hard work and dedication. Join us for a night of unforgettable music
+          and memories as Ben performs his latest hits and fan favorites.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 PianoMan0. All Rights Reserved.</p>
+      <p>Website by <a href="#">PianoMan0</a></p>
+    </footer>
+  </body>
+</html>
